@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-content">
+            <div class="form-heading">
+                <h1 class="form-title">REGISTER</h1>
+                <p class="form-text">Online Registration</p>
+            </div>
+            <!-- Form -->
+            <form action="https://api-gateway.fullstack.edu.vn/action_page.php" class="form" autocomplete="off" enctype="multipart/form-data" >
+                <!-- Profile Picture -->
+                <div class="form-group">
+                    <label>
+                        <span class="form-label">Profile Picture</span>
+                        <img class="img" src="images/avatar_placeholder.png" alt="Choose your avatar...">
+                        <input type="file" id="profile-picture" hidden>
+                    </label>
+                </div>
+                <!-- Profile Picture -->
+                <div class="form-group">
+                    <label>
+                        <span class="form-label required">Display Name</span>
+                        <input type="text" class="text-input" spellcheck="false" required
+                        placeholder="Your display name...">
+                    </label>
+                </div>
+                <!-- Mail -->
+                <div class="form-group">
+                    <label>
+                        <span class="form-label required">Email</span>
+                        <input type="email" class="text-input" spellcheck="false" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                        placeholder="Your email address...">
+                    </label>
+                </div>
+                <!-- Phone -->
+                <div class="form-group">
+                    <label>
+                        <span class="form-label required">Phone Number</span>
+                        <input type="tel" class="text-input" spellcheck="false" required
+                        pattern="\d{10}" placeholder="Your phone number...">
+                    </label>
+                </div>
+                <!-- Password -->
+                <div class="form-group">
+                    <label>
+                        <span class="form-label required">Password</span>
+                        <input type="password" class="text-input" spellcheck="false" required
+                        placeholder="Your password...">
+                    </label>
+                </div>
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label>
+                        <span class="form-label required">Confirm Password</span>
+                        <input type="password" class="text-input" spellcheck="false" minlength="8"
+                        placeholder="Re-Enter your password..." required>
+                    </label>
+                </div>
+                <!-- Gender -->
+                <div class="form-group">
+                    <label  class="radio">
+                        <span class="form-label">Gender</span>
+                        <input type="radio" id="male" name="Gender" value="male" checked>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="Gender" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" id="other" name="Gender" value="other">
+                        <label for="other">Other</label>
+                    </label>
+                </div>
+                <!-- Date of birth -->
+                <div class="form-group">
+                    <label>
+                        <span class="form-label">Date of Birth</span>
+                        <input class="text-input" type="date">
+                    </label>
+                </div>
+                <!-- Address -->
+                <div class="form-group">
+                    <label>
+                        <span class="form-label">Address</span>
+                        <input type="text" class="text-input" spellcheck="false" placeholder="Your address...">
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label >
+                        <span class="form-label">Communication Preferences</span>
+                        <label class="check-box-label">
+                            <input type="checkbox" id="newsletter" value="newsletter">
+                            <label for="newsletter">Subscribe to Newsletter</label>
+                        </label>
+                        <label class="check-box-label">
+                            <input type="checkbox" id="email" value="email">
+                            <label for="email">Receive Promotional Emails</label>
+                        </label>
+                        <label class="check-box-label">
+                            <input type="checkbox" id="update" value="update">
+                            <label for="update">Get Product Updates</label>
+                        </label>                
+                    </label>
+                </div> 
+                <div class="form-group">
+                    <button class="btn">CREATE ACCOUNT</button>
+                </div>   
+            </form>
+        </div>
+    </div>
+</body>
+</html>
