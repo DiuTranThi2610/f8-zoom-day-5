@@ -54,6 +54,10 @@ h1{
 }
 
 .menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
     height: 80px;
     border-left: 1px solid #fff;
 }
@@ -63,12 +67,8 @@ h1{
 }
 
 .menu-item a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100%;
-    padding: 0 20px;
-    
+    align-content: center;   
     color: #fff;
     font-size: 1.5rem;
     text-decoration: none;
@@ -85,7 +85,7 @@ h1{
     color:blue;
 }
 
-.menu-item::before{
+.menu-item::before {
     content:'\25B6' ;
     color: #fff;
     margin-right: 5px;
@@ -108,16 +108,20 @@ h1{
 .form{
     width: 70%;
     margin: 0 auto;
+    color: #fff;
 }
 
 .form-heading{
     text-align: center;
+    color: #fff;
 }
 
 .form-title{
     font-size: 2.5rem;
     font-weight: 600;
     margin: 0;
+    color: #fff;
+
 }
 
 .form-text{
@@ -140,8 +144,15 @@ h1{
     padding: 15px 10px;
     display: block;
     background-color: transparent;
-    border: 1.2px solid #000;
+    border: 1.2px solid #fff;
     border-radius: 5px;
+    color: #ccc;   
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(50%);
+    opacity: 0.9;
+    cursor: pointer;
 }
 
 .form-group:has(:invalid:not(:placeholder-shown)) .text-input {
@@ -157,7 +168,7 @@ h1{
 }
 
 .text-input::placeholder{
-    color: #000;
+    color: #ccc;
 }
 
 .img{
@@ -185,19 +196,22 @@ h1{
 .btn{
     width: 100%;
     min-height: 50px;
-    background-color: #0c8396;
-    color: white;
+    background-color: #F9C784;
+    color: #1e2e2e;
     border-radius: 10px;
     font-weight: 700;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover{
-    color: blue;
+    background-color: #f7b24b;
+    color: #1e2e2e;
 }
 
 .btn:active{
-    color: #000;
+    background-color: #d99b3d;
+    color: #1e2e2e;
 }
 
 /* Pricing */
