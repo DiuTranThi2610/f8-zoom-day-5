@@ -55,31 +55,34 @@ h1{
 }
 
 .menu-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 80px;
-    padding: 0 20px;
     border-left: 1px solid #fff;
 }
 
+.menu-item:first-child{
+    border-left: none;
+}
+
 .menu-item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+    padding: 0 20px;
+    
     color: #fff;
     font-size: 1.5rem;
     text-decoration: none;
     font-weight: bold;
 }
-.menu-item:first-child{
-    border-left: none;
-}
 
-.menu-item:hover, .menu-item:hover a {
+.menu-item a:hover {
     background-color: white;
     color: black;
     cursor: pointer;
 }
 
-.menu-item:active a{
+.menu-item a:active {
     color:blue;
 }
 
